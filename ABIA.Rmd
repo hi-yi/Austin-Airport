@@ -1,6 +1,6 @@
 ---
 title: "Austin-Bergstrom Interational Airport - Visualization"
-output: github_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
