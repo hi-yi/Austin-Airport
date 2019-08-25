@@ -48,7 +48,7 @@ ggplot(prop2, aes(x=UniqueCarrier,y=Freq))+
 
 Atlantic Southeast Airlines(EV) has also the highest average delay time
 with 33 minutes followed by Comair(oh) Airlines with 25 minutes. US
-Airways has the lowest average delay rate with 2 minutes.
+Airways has the lowest average delay time with 2 minutes.
 
 ## 2\) Delay by month
 
@@ -67,7 +67,7 @@ ggplot(prop, aes(x=Month,y=Freq))+
 ![](ABIA_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Months in vacation, which is December, March, June, have higher
-proportion of delayed flight. However, fall season from September to
+proportion of delayed flight. However, in fall season from September to
 November, the rate tend to be lower.
 
 ``` r
@@ -83,7 +83,7 @@ ggplot(prop, aes(x=Month,y=Freq)) + geom_bar(stat="identity")+
 ![](ABIA_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 Similar to the proportion of delay flight, months in vacation, which is
-December, March, June, have higher delayed time. However, fall season
+December, March, June, have higher delay time. However, in fall season
 from September to November, the delay time tend to be lower.
 
 ## 3\) Delay by airport(Top 10)
@@ -150,3 +150,6 @@ ggplot(data = abia_depart) +
 ```
 
 ![](ABIA_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+Even though there are a lot more delay in flights departing from Austin,
+you can also expect early arrival.

@@ -6,8 +6,6 @@ output: github_document
 
 
 
-
-
 ```{r}
 abia = read.csv('ABIA.csv', header=TRUE)
 abia = abia[,-1]
@@ -47,7 +45,7 @@ ggplot(prop2, aes(x=UniqueCarrier,y=Freq))+
   ylab("Average delayed time")
 ```
 
-Atlantic Southeast Airlines(EV) has also the highest average delay time with 33 minutes followed by Comair(oh) Airlines with 25 minutes. US Airways has the lowest average delay rate with 2 minutes.
+Atlantic Southeast Airlines(EV) has also the highest average delay time with 33 minutes followed by Comair(oh) Airlines with 25 minutes. US Airways has the lowest average delay time with 2 minutes.
 
 
 ## 2) Delay by month
@@ -64,7 +62,7 @@ ggplot(prop, aes(x=Month,y=Freq))+
   ylab("Proportion of delayed flight")
 ```
 
-Months in vacation, which is December, March, June, have higher proportion of delayed flight. However, fall season from September to November, the rate tend to be lower.
+Months in vacation, which is December, March, June, have higher proportion of delayed flight. However, in fall season from September to November, the rate tend to be lower.
 
 ```{r}
 prop = xtabs(TotalDelay~Month , aggregate(TotalDelay~Month,abia,mean))
@@ -76,7 +74,7 @@ ggplot(prop, aes(x=Month,y=Freq)) + geom_bar(stat="identity")+
   ylab("Average delayed time")
 ```
 
-Similar to the proportion of delay flight, months in vacation, which is December, March, June, have higher delayed time. However, fall season from September to November, the delay time tend to be lower.
+Similar to the proportion of delay flight, months in vacation, which is December, March, June, have higher delay time. However, in fall season from September to November, the delay time tend to be lower.
 
 ## 3) Delay by airport(Top 10)
 
@@ -131,3 +129,4 @@ ggplot(data = abia_depart) +
   geom_point(mapping = aes(x = UniqueCarrier, y = early), color='steelblue')
 ```
 
+Even though there are a lot more delay in flights departing from Austin, you can also expect early arrival.
