@@ -149,6 +149,4 @@ ggplot(data = abia_depart) +
   geom_point(mapping = aes(x = UniqueCarrier, y = early), color='steelblue')
 ```
 
-    ## Warning: Removed 827 rows containing missing values (geom_point).
-
 ![](ABIA_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->

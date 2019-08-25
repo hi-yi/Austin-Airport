@@ -6,6 +6,8 @@ output: github_document
 
 
 
+
+
 ```{r}
 abia = read.csv('ABIA.csv', header=TRUE)
 abia = abia[,-1]
@@ -124,7 +126,7 @@ Flights departing late night tend to be delayed more. Also, flight on weekend te
 
 ## 5) Early arrival by Airways
 
-```{r}
+```{r, warning = FALSE}
 ggplot(data = abia_depart) + 
   geom_point(mapping = aes(x = UniqueCarrier, y = early), color='steelblue')
 ```
